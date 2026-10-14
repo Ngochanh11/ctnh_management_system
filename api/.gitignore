@@ -1,0 +1,73 @@
+# CTNH Management System - Git Ignore File
+
+# Local configuration
+config.local.php
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+*.cache
+
+# Uploads (nếu có)
+uploads/
+files/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+*.sql.gz
+backup/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# PHPStorm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Composer
+vendor/
+composer.lock
+
+# NPM (nếu dùng)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build files (nếu có)
+dist/
+build/
+
+# Test coverage
+coverage/
+.phpunit.result.cache
