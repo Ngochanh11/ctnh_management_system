@@ -123,7 +123,7 @@ ctnh_management_system/
 └── index.html
 ```
 
-The root contains only `assets/`, `js/`, `api/`, and `index.html`. PHP pages, configuration, setup scripts, schema, and import utilities are kept under `api/`.
+The root contains only `assets/`, `js/`, `api/`, and `index.html`. PHP pages, configuration, setup scripts, and import utilities are kept under `api/`. The company KRUD API is the source of truth for application data; tables and fields are created through API writes, so there is no local SQL schema to apply.
 
 ## 🗄️ Database Tables (Tự động tạo qua API)
 
