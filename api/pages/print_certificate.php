@@ -129,12 +129,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['log_print'])) {
         .meta { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
         .meta > div { padding: 2mm 3mm; min-height: 12mm; }
         .meta > div + div { border-left: 1px solid var(--line); }
-        .signatures { display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 39mm; border-bottom: 1px solid var(--line); }
+        .signatures { display: grid; grid-template-columns: 1fr 1fr; min-height: 39mm; border-bottom: 1px solid var(--line); }
         .signature { text-align: center; padding: 2mm; border-right: 1px solid var(--line); }
         .signature:last-child { border-right: 0; }
-        .signature strong { display: block; text-transform: uppercase; }
-        .signature em { font-size: 7.5pt; }
-        .signature-space { height: 20mm; }
+        .signature strong { display: block; margin-bottom: 1mm; font-size: 7.6pt; text-transform: uppercase; }
+        .signature em { display: block; min-height: 7mm; font-size: 6.4pt; font-style: italic; line-height: 1.2; }
+        .signature-date { margin: 1mm 0 2mm; font-size: 6.8pt; }
+        .signature-space { height: 17mm; }
         .signature-person { font-weight: 700; }
         .confirm { display: grid; grid-template-columns: 1fr 1fr; min-height: 22mm; border-bottom: 1px solid var(--line); }
         .confirm > div { padding: 2mm 3mm; }
@@ -269,9 +270,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['log_print'])) {
                     <div class="meta"><div><strong>5. Xuất khẩu CTNH (nếu có)</strong><br>Số hiệu phương tiện: <span class="dotted"></span> Ngày xuất cảng: <span class="dotted"></span></div><div>Giấy phép xuất khẩu: <span class="dotted"></span><br>Cửa khẩu nhập: <span class="dotted"></span> Cửa khẩu xuất: <span class="dotted"></span></div></div>
                     <div class="meta"><div><strong>7. Xác nhận việc tiếp nhận đã xử lý CTNH</strong><br>Người nhận: <span class="dotted"></span> Ký: <span class="dotted"></span> Ngày: <span class="dotted"></span></div><div><strong>Số hiệu phương tiện vận chuyển:</strong> <span class="dotted"></span><br>Người nhận thay mặt CTNH 2: <span class="dotted"></span></div></div>
                     <div class="signatures">
-                        <div class="signature"><strong>6. Chủ nguồn thải</strong><em>Xác nhận thông tin và khối lượng CTNH</em><div class="signature-space"></div><span class="signature-person">${representative}</span><br>Ký, ghi rõ họ tên và đóng dấu</div>
-                        <div class="signature"><strong>Người giao / người nhận</strong><em>Họ tên, chữ ký và ngày</em><div class="signature-space"></div>Ký, ghi rõ họ tên</div>
-                        <div class="signature"><strong>8. Chủ CS DV XL CTNH</strong><em>Xác nhận hoàn thành việc xử lý</em><div class="signature-space"></div>Ký, ghi rõ họ tên và đóng dấu</div>
+                        <div class="signature"><strong>6. Chủ nguồn thải</strong><em>Xác nhận đã thống nhất để kê khai chính xác các thông tin ở mục 1-4 (hoặc 5)</em><div class="signature-date">Ngày: ........ tháng ........ năm ........</div><div class="signature-space"></div><span class="signature-person">${representative}</span><br>Ký, ghi rõ họ tên và đóng dấu</div>
+                        <div class="signature"><strong>8. Chủ CS DV XL CTNH (người chứng nhận)</strong><em>Xác nhận đã hoàn thành việc xử lý an toàn tất cả CTNH bằng các phương pháp như kê khai ở mục 4</em><div class="signature-date">Ngày: ........ tháng ........ năm ........</div><div class="signature-space"></div>Ký, ghi rõ họ tên và đóng dấu</div>
                     </div>
                     <div class="bottom-note">Liên số: □ 1　 □ 2　 □ 3　 □ 4　　 Ghi chú: <span class="dotted"></span></div>
                 </div>

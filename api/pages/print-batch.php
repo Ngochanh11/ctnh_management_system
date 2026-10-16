@@ -28,39 +28,28 @@ unset($document);
 <div class="page-header">
     <div class="d-flex justify-content-between align-items-center">
         <div>
-            <h1><i class="fas fa-print me-2"></i>In hàng loạt</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL; ?>/pages/dashboard.php">Trang chủ</a></li>
-                    <li class="breadcrumb-item active">In hàng loạt</li>
-                </ol>
-            </nav>
+            <h1><i class="fas fa-print me-2"></i>In chứng từ nguy hại</h1>
+        </div>
+        <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-primary" onclick="selectAll()">
+                <i class="fas fa-check-square me-2"></i>Chọn tất cả
+            </button>
+            <button type="button" class="btn btn-outline-secondary" onclick="deselectAll()">
+                <i class="fas fa-square me-2"></i>Bỏ chọn
+            </button>
         </div>
     </div>
 </div>
 
 <div class="card">
-    <div class="card-header">
-        <div class="d-flex justify-content-between align-items-center">
-            <span><i class="fas fa-file-alt me-2"></i>Chọn chứng từ cần in</span>
-            <div>
-                <button type="button" class="btn btn-sm btn-outline-primary" onclick="selectAll()">
-                    <i class="fas fa-check-square me-1"></i>Chọn tất cả
-                </button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="deselectAll()">
-                    <i class="fas fa-square me-1"></i>Bỏ chọn
-                </button>
-            </div>
-        </div>
-    </div>
     <div class="card-body">
         <form method="POST" id="printForm">
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th style="width: 50px;">
-                                <input type="checkbox" id="selectAllCheckbox" onchange="toggleAll(this)">
+                            <th>
+                                <input type="checkbox" id="selectAllCheckbox" aria-label="Chọn tất cả chứng từ" onchange="toggleAll(this)">
                             </th>
                             <th>Mã chứng từ</th>
                             <th>Khách hàng</th>
@@ -94,7 +83,7 @@ unset($document);
                                     <?php echo $statusMeta['label']; ?>
                                 </span>
                             </td>
-                            <td>
+                            <td class="action-buttons">
                                 <button type="button" class="btn btn-sm btn-success" onclick="printSingle(<?php echo $doc['id']; ?>)">
                                     <i class="fas fa-print me-1"></i>In
                                 </button>

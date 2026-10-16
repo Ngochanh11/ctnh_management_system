@@ -408,14 +408,14 @@ $itemsPerPage = DEFAULT_ROWS_PER_PAGE;
         .acceptance { padding-top: 1.5mm; padding-bottom: 1.5mm; }
         .acceptance { font-size: 7.5pt; line-height: 1.22; }
         .acceptance p { margin: .7mm 0; }
-        .signatures { display: grid; grid-template-columns: 1fr 1fr; min-height: 38mm; margin-top: 0; border-bottom: 1px solid #777; }
-        .signature-box { width: auto; padding: 1.5mm; border-right: 1px solid #777; text-align: center; }
+        .signatures { display: grid; grid-template-columns: 1fr 1fr; min-height: 39mm; margin-top: 0; border-bottom: 1px solid #777; }
+        .signature-box { width: auto; padding: 2mm; border-right: 1px solid #777; text-align: center; }
         .signature-box:last-child { border-right: 0; }
-        .signature-title { margin-bottom: 1mm; font-size: 7.6pt; font-weight: 700; }
-        .signature-subtitle { min-height: 7mm; margin-bottom: 0; font-size: 6.4pt; line-height: 1.2; }
-        .signature-space { height: 17mm; }
+        .signature-title { margin-bottom: 1mm; font-size: 7.6pt; font-weight: 700; text-transform: uppercase; }
+        .signature-subtitle { min-height: 7mm; margin-bottom: 0; font-size: 6.4pt; font-style: italic; line-height: 1.2; }
         .signature-date { margin: 1mm 0 2mm; font-size: 6.8pt; }
-        .signature-name { font-size: 7.2pt; font-weight: 600; }
+        .signature-space { height: 17mm; }
+        .signature-name { font-size: 7.2pt; font-weight: 700; }
         .bottom-note { padding: 1.5mm 2.5mm; font-size: 6.8pt; line-height: 1.2; }
         .page-number { bottom: 2mm; right: 2mm; font-size: 7pt; }
         @media print {
@@ -531,15 +531,15 @@ $itemsPerPage = DEFAULT_ROWS_PER_PAGE;
             <section class="signatures">
                 <div class="signature-box">
                     <div class="signature-title">6. Chủ nguồn thải</div>
-                    <div class="signature-subtitle">Xác nhận đã thống nhất thông tin và khối lượng CTNH</div>
+                    <div class="signature-subtitle">Xác nhận đã thống nhất để kê khai chính xác các thông tin ở mục 1-4 (hoặc 5)</div>
                     <div class="signature-date">Ngày: ........ tháng ........ năm ........</div>
                     <div class="signature-space"></div>
                     <div class="signature-name"><?php echo sanitize($doc['representative'] ?? ''); ?></div>
                     <div>Ký, ghi rõ họ tên và đóng dấu</div>
                 </div>
                 <div class="signature-box">
-                    <div class="signature-title">8. Chủ CS DV XL CTNH</div>
-                    <div class="signature-subtitle">Xác nhận hoàn thành việc xử lý an toàn</div>
+                    <div class="signature-title">8. Chủ CS DV XL CTNH (người chứng nhận)</div>
+                    <div class="signature-subtitle">Xác nhận đã hoàn thành việc xử lý an toàn tất cả CTNH bằng các phương pháp như kê khai ở mục 4</div>
                     <div class="signature-date">Ngày: ........ tháng ........ năm ........</div>
                     <div class="signature-space"></div>
                     <div>Ký, ghi rõ họ tên và đóng dấu</div>
